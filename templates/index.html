@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SportSearch — BM25 Sports Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">SPORT<em>SEARCH</em></span>
+      </div>
+      <div class="header-stats">
+        <span class="stat-pill">
+          <span class="stat-label">DOCS</span>
+          <span class="stat-val" id="hdr-docs">{{ stats.total_docs }}</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">VOCAB</span>
+          <span class="stat-val" id="hdr-vocab">{{ stats.vocabulary_size }}</span>
+        </span>
+        <span class="stat-pill accent">BM25</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / search area -->
+  <section class="hero">
+    <div class="hero-bg-text">SEARCH</div>
+    <div class="hero-content">
+      <h1 class="hero-title">Find any sports story<br /><em>instantly.</em></h1>
+      <p class="hero-sub">Football · Formula 1 · NBA — ranked by BM25 relevance</p>
+
+      <div class="search-wrapper">
+        <div class="search-box" id="searchBox">
+          <span class="search-icon">⌕</span>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="e.g. Messi World Cup, Verstappen champion, Curry three point…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="search-btn" id="searchBtn">SEARCH</button>
+        </div>
+
+        <!-- Autocomplete dropdown -->
+        <ul class="autocomplete-list" id="autocompleteList" hidden></ul>
+      </div>
+
+      <!-- Category filter chips -->
+      <div class="category-chips">
+        <button class="chip active" data-cat="all">All Sports</button>
+        <button class="chip" data-cat="football">⚽ Football</button>
+        <button class="chip" data-cat="f1">🏎 Formula 1</button>
+        <button class="chip" data-cat="nba">🏀 NBA</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results area -->
+  <main class="results-area" id="resultsArea">
+    <!-- Filled by JS -->
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">◇</div>
+      <p>Type a query to start searching</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      Built with Python · Flask · BM25 · Enhancement C: Autocomplete
+      &nbsp;|&nbsp;
+      <span id="footerStats">{{ stats.total_docs }} docs · {{ stats.vocabulary_size }} terms indexed</span>
+    </p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
