@@ -103,7 +103,7 @@ python app.py
 
 ## 🖼 Screenshots
 
-> Add screenshots here after running the project.
+<img width="1412" height="755" alt="Captura de pantalla 2026-03-23 a la(s) 11 39 41 p m" src="https://github.com/user-attachments/assets/71a23da7-ab0d-412c-8710-93a6830ad50d" /><img width="1433" height="786" alt="Captura de pantalla 2026-03-23 a la(s) 11 39 52 p m" src="https://github.com/user-attachments/assets/abfed92d-efdf-453a-81cb-c730d2383087" />
 
 ---
 
