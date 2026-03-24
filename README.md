@@ -1,6 +1,6 @@
 # 🏆 SportSearch — BM25 Sports Search Engine
 
-**Student:** [Tu nombre aquí]
+**Student:** Emiliano Galaviz Gomez
 **Domain:** Sports (Football, Formula 1, NBA)
 **Enhancement:** C — Autocomplete
 
